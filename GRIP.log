@@ -1,0 +1,68 @@
+Feb 28, 2017 8:33:08 PM edu.wpi.grip.core.util.service.LoggingListener starting
+INFO: [PipelineRunner] Starting
+Feb 28, 2017 8:33:42 PM edu.wpi.grip.core.util.service.LoggingListener terminated
+INFO: [PipelineRunner] Terminated from: STOPPING
+Feb 28, 2017 8:33:42 PM edu.wpi.grip.core.events.EventLogger eventPosted
+INFO: Event on thread 'Project Open Thread': SourceAddedEvent{source=ImageFileSource{name=1ftH2ftD0Angle0Brightness}}
+Feb 28, 2017 8:33:43 PM edu.wpi.grip.core.events.EventLogger eventPosted
+INFO: Event on thread 'Project Open Thread': StepAddedEvent{step=Step{operation=Resize Image}, index=OptionalInt[0]}
+Feb 28, 2017 8:33:43 PM edu.wpi.grip.core.events.EventLogger eventPosted
+INFO: Event on thread 'Project Open Thread': StepAddedEvent{step=Step{operation=HSV Threshold}, index=OptionalInt[1]}
+Feb 28, 2017 8:33:43 PM edu.wpi.grip.core.events.EventLogger eventPosted
+INFO: Event on thread 'Project Open Thread': StepAddedEvent{step=Step{operation=CV erode}, index=OptionalInt[2]}
+Feb 28, 2017 8:33:43 PM edu.wpi.grip.core.events.EventLogger eventPosted
+INFO: Event on thread 'Project Open Thread': StepAddedEvent{step=Step{operation=Find Contours}, index=OptionalInt[3]}
+Feb 28, 2017 8:33:44 PM edu.wpi.grip.core.events.EventLogger eventPosted
+INFO: Event on thread 'Project Open Thread': StepAddedEvent{step=Step{operation=Convex Hulls}, index=OptionalInt[4]}
+Feb 28, 2017 8:33:44 PM edu.wpi.grip.core.events.EventLogger eventPosted
+INFO: Event on thread 'Project Open Thread': StepAddedEvent{step=Step{operation=NTPublish ContoursReport}, index=OptionalInt[5]}
+Feb 28, 2017 8:33:44 PM edu.wpi.grip.core.events.EventLogger eventPosted
+INFO: Event on thread 'Project Open Thread': StepAddedEvent{step=Step{operation=NTPublish ContoursReport}, index=OptionalInt[6]}
+Feb 28, 2017 8:33:44 PM edu.wpi.grip.core.events.EventLogger eventPosted
+INFO: Event on thread 'Project Open Thread': ConnectionAddedEvent{connection=Connection{src=Source/1ftH2ftD0Angle0Brightness/Image, dst=Step/Resize Image/Input}}
+Feb 28, 2017 8:33:44 PM edu.wpi.grip.core.events.EventLogger eventPosted
+INFO: Event on thread 'Project Open Thread': ConnectionAddedEvent{connection=Connection{src=Step/Convex Hulls/Contours, dst=Step/NTPublish ContoursReport/Data}}
+Feb 28, 2017 8:33:44 PM edu.wpi.grip.core.events.EventLogger eventPosted
+INFO: Event on thread 'Project Open Thread': ConnectionAddedEvent{connection=Connection{src=Step/CV erode/dst, dst=Step/Find Contours/Input}}
+Feb 28, 2017 8:33:44 PM edu.wpi.grip.core.events.EventLogger eventPosted
+INFO: Event on thread 'Project Open Thread': ConnectionAddedEvent{connection=Connection{src=Step/Find Contours/Contours, dst=Step/Convex Hulls/Contours}}
+Feb 28, 2017 8:33:45 PM edu.wpi.grip.core.events.EventLogger eventPosted
+INFO: Event on thread 'Project Open Thread': ConnectionAddedEvent{connection=Connection{src=Step/HSV Threshold/Output, dst=Step/CV erode/src}}
+Feb 28, 2017 8:33:45 PM edu.wpi.grip.core.events.EventLogger eventPosted
+INFO: Event on thread 'Project Open Thread': ConnectionAddedEvent{connection=Connection{src=Step/Resize Image/Output, dst=Step/HSV Threshold/Input}}
+Feb 28, 2017 8:33:45 PM edu.wpi.grip.core.events.EventLogger eventPosted
+INFO: Event on thread 'Project Open Thread': edu.wpi.grip.core.events.ProjectSettingsChangedEvent@2122c83a
+Feb 28, 2017 8:33:45 PM edu.wpi.grip.core.events.EventLogger eventPosted
+INFO: Event on thread 'Project Open Thread': edu.wpi.grip.core.events.CodeGenerationSettingsChangedEvent@5d72f2dc
+Feb 28, 2017 8:33:45 PM edu.wpi.grip.core.util.service.LoggingListener starting
+INFO: [PipelineRunner] Starting
+Feb 28, 2017 8:33:50 PM edu.wpi.grip.core.operations.network.networktables.NTManager lambda$new$0
+SEVERE: NetworkTables: TCPConnector.cpp:158 select() to roboRIO-0-FRC.local port 1735 error 111 - Connection refused
+Feb 28, 2017 8:33:55 PM edu.wpi.grip.core.operations.network.networktables.NTManager lambda$new$0
+SEVERE: NetworkTables: TCPConnector.cpp:158 select() to roboRIO-0-FRC.local port 1735 error 111 - Connection refused
+Feb 28, 2017 8:34:01 PM edu.wpi.grip.core.operations.network.networktables.NTManager lambda$new$0
+SEVERE: NetworkTables: TCPConnector.cpp:158 select() to roboRIO-0-FRC.local port 1735 error 111 - Connection refused
+Feb 28, 2017 8:34:06 PM edu.wpi.grip.core.operations.network.networktables.NTManager lambda$new$0
+SEVERE: NetworkTables: TCPConnector.cpp:158 select() to roboRIO-0-FRC.local port 1735 error 111 - Connection refused
+Feb 28, 2017 8:34:11 PM edu.wpi.grip.core.operations.network.networktables.NTManager lambda$new$0
+SEVERE: NetworkTables: TCPConnector.cpp:158 select() to roboRIO-0-FRC.local port 1735 error 111 - Connection refused
+Feb 28, 2017 8:34:16 PM edu.wpi.grip.core.operations.network.networktables.NTManager lambda$new$0
+SEVERE: NetworkTables: TCPConnector.cpp:158 select() to roboRIO-0-FRC.local port 1735 error 111 - Connection refused
+Feb 28, 2017 8:34:22 PM edu.wpi.grip.core.operations.network.networktables.NTManager lambda$new$0
+SEVERE: NetworkTables: TCPConnector.cpp:158 select() to roboRIO-0-FRC.local port 1735 error 111 - Connection refused
+Feb 28, 2017 8:34:27 PM edu.wpi.grip.core.operations.network.networktables.NTManager lambda$new$0
+SEVERE: NetworkTables: TCPConnector.cpp:158 select() to roboRIO-0-FRC.local port 1735 error 111 - Connection refused
+Feb 28, 2017 8:34:32 PM edu.wpi.grip.core.operations.network.networktables.NTManager lambda$new$0
+SEVERE: NetworkTables: TCPConnector.cpp:158 select() to roboRIO-0-FRC.local port 1735 error 111 - Connection refused
+Feb 28, 2017 8:34:37 PM edu.wpi.grip.core.operations.network.networktables.NTManager lambda$new$0
+SEVERE: NetworkTables: TCPConnector.cpp:158 select() to roboRIO-0-FRC.local port 1735 error 111 - Connection refused
+Feb 28, 2017 8:34:43 PM edu.wpi.grip.core.operations.network.networktables.NTManager lambda$new$0
+SEVERE: NetworkTables: TCPConnector.cpp:158 select() to roboRIO-0-FRC.local port 1735 error 111 - Connection refused
+Feb 28, 2017 8:34:48 PM edu.wpi.grip.core.operations.network.networktables.NTManager lambda$new$0
+SEVERE: NetworkTables: TCPConnector.cpp:158 select() to roboRIO-0-FRC.local port 1735 error 111 - Connection refused
+Feb 28, 2017 8:34:53 PM edu.wpi.grip.core.operations.network.networktables.NTManager lambda$new$0
+SEVERE: NetworkTables: TCPConnector.cpp:158 select() to roboRIO-0-FRC.local port 1735 error 111 - Connection refused
+Feb 28, 2017 8:34:56 PM edu.wpi.grip.core.util.service.LoggingListener terminated
+INFO: [PipelineRunner] Terminated from: STOPPING
+Feb 28, 2017 8:34:56 PM edu.wpi.grip.core.util.SafeShutdown exit
+INFO: Exiting GRIP
